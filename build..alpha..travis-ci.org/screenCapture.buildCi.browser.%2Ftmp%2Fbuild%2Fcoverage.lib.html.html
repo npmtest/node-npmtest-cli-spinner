@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-cli-spinner/cli-spinner/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-cli-spinner/node_modules/cli-spinner/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-cli-spinner">npmtest-cli-spinner (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-cli-spinner/cli-spinner/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-cli-spinner/node_modules/cli-spinner/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">32.14% <small>(18 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-cli-spinner/cli-spinner/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-cli-spinner/node_modules/cli-spinner/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -429,111 +427,112 @@
 var defaultSpinnerString = 0;
 var defaultSpinnerDelay = 60;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function defaultOnTick(msg) {</span>
-<span class="cstat-no" title="statement not covered" >  this.clearLine(this.stream);</span>
-<span class="cstat-no" title="statement not covered" >  this.stream.write(msg);</span>
+<span class="fstat-no" title="function not covered">function defaultOnTick(msg) {</span>
+<span class="cstat-no" title="statement not covered">  this.clearLine(this.stream);</span>
+<span class="cstat-no" title="statement not covered">  this.stream.write(msg);</span>
 };
 &nbsp;
-var Spinner = <span class="fstat-no" title="function not covered" >function(options){</span>
-<span class="cstat-no" title="statement not covered" >  if(!(this instanceof Spinner)) <span class="cstat-no" title="statement not covered" >return new Spinner(options)</span></span>
+var Spinner = <span class="fstat-no" title="function not covered">function(options){</span>
+<span class="cstat-no" title="statement not covered">  if(!(this instanceof Spinner)) <span class="cstat-no" title="statement not covered">return new Spinner(options)</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if(typeof options === "string"){</span>
-<span class="cstat-no" title="statement not covered" >    options = { text: options };</span>
-  } else <span class="cstat-no" title="statement not covered" >if(!options){</span>
-<span class="cstat-no" title="statement not covered" >    options = {};</span>
+<span class="cstat-no" title="statement not covered">  if(typeof options === "string"){</span>
+<span class="cstat-no" title="statement not covered">    options = { text: options };</span>
+  } else <span class="cstat-no" title="statement not covered">if(!options){</span>
+<span class="cstat-no" title="statement not covered">    options = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.text = options.text || '';</span>
-<span class="cstat-no" title="statement not covered" >  this.setSpinnerString(defaultSpinnerString);</span>
-<span class="cstat-no" title="statement not covered" >  this.setSpinnerDelay(defaultSpinnerDelay);</span>
-<span class="cstat-no" title="statement not covered" >  this.onTick = options.onTick || defaultOnTick;</span>
-<span class="cstat-no" title="statement not covered" >  this.stream = options.stream || process.stdout;</span>
+<span class="cstat-no" title="statement not covered">  this.text = options.text || '';</span>
+<span class="cstat-no" title="statement not covered">  this.setSpinnerString(defaultSpinnerString);</span>
+<span class="cstat-no" title="statement not covered">  this.setSpinnerDelay(defaultSpinnerDelay);</span>
+<span class="cstat-no" title="statement not covered">  this.onTick = options.onTick || defaultOnTick;</span>
+<span class="cstat-no" title="statement not covered">  this.stream = options.stream || process.stdout;</span>
 };
 &nbsp;
 Spinner.spinners = require('./spinners.json');
 &nbsp;
-Spinner.setDefaultSpinnerString = <span class="fstat-no" title="function not covered" >function(value) {</span>
-<span class="cstat-no" title="statement not covered" >  defaultSpinnerString = value;</span>
+Spinner.setDefaultSpinnerString = <span class="fstat-no" title="function not covered">function(value) {</span>
+<span class="cstat-no" title="statement not covered">  defaultSpinnerString = value;</span>
 };
 &nbsp;
-Spinner.setDefaultSpinnerDelay = <span class="fstat-no" title="function not covered" >function(value) {</span>
-<span class="cstat-no" title="statement not covered" >  defaultSpinnerDelay = value;</span>
+Spinner.setDefaultSpinnerDelay = <span class="fstat-no" title="function not covered">function(value) {</span>
+<span class="cstat-no" title="statement not covered">  defaultSpinnerDelay = value;</span>
 };
 &nbsp;
-Spinner.prototype.start = <span class="fstat-no" title="function not covered" >function() {</span>
+Spinner.prototype.start = <span class="fstat-no" title="function not covered">function() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var current = 0;</span>
-<span class="cstat-no" title="statement not covered" >  var self = this;</span>
+<span class="cstat-no" title="statement not covered">  var current = 0;</span>
+<span class="cstat-no" title="statement not covered">  var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.id = setInterval(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >    var msg = self.text.indexOf('%s') &gt; -1</span>
+<span class="cstat-no" title="statement not covered">  this.id = setInterval(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">    var msg = self.text.indexOf('%s') &gt; -1</span>
       ? self.text.replace('%s', self.chars[current])
       : self.chars[current] + ' ' + self.text;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.onTick(msg);</span>
+<span class="cstat-no" title="statement not covered">    self.onTick(msg);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    current = ++current % self.chars.length;</span>
+<span class="cstat-no" title="statement not covered">    current = ++current % self.chars.length;</span>
   }, this.delay);
 };
 &nbsp;
-Spinner.prototype.isSpinning = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.id !== undefined;</span>
+Spinner.prototype.isSpinning = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this.id !== undefined;</span>
 }
 &nbsp;
-Spinner.prototype.setSpinnerDelay = <span class="fstat-no" title="function not covered" >function(n) {</span>
-<span class="cstat-no" title="statement not covered" >  this.delay = n;</span>
+Spinner.prototype.setSpinnerDelay = <span class="fstat-no" title="function not covered">function(n) {</span>
+<span class="cstat-no" title="statement not covered">  this.delay = n;</span>
 };
 &nbsp;
-Spinner.prototype.setSpinnerString = <span class="fstat-no" title="function not covered" >function(str) {</span>
-<span class="cstat-no" title="statement not covered" >  this.chars = mapToSpinner(str, this.spinners).split('');</span>
+Spinner.prototype.setSpinnerString = <span class="fstat-no" title="function not covered">function(str) {</span>
+<span class="cstat-no" title="statement not covered">  this.chars = mapToSpinner(str, this.spinners).split('');</span>
 };
 &nbsp;
-Spinner.prototype.setSpinnerTitle = <span class="fstat-no" title="function not covered" >function(str) {</span>
-<span class="cstat-no" title="statement not covered" >  this.text = str;</span>
+Spinner.prototype.setSpinnerTitle = <span class="fstat-no" title="function not covered">function(str) {</span>
+<span class="cstat-no" title="statement not covered">  this.text = str;</span>
 }
 &nbsp;
-Spinner.prototype.stop = <span class="fstat-no" title="function not covered" >function(clear) {</span>
-<span class="cstat-no" title="statement not covered" >  clearInterval(this.id);</span>
-<span class="cstat-no" title="statement not covered" >  this.id = undefined;</span>
-<span class="cstat-no" title="statement not covered" >  if (clear) {</span>
-<span class="cstat-no" title="statement not covered" >    this.clearLine(this.stream);</span>
+Spinner.prototype.stop = <span class="fstat-no" title="function not covered">function(clear) {</span>
+<span class="cstat-no" title="statement not covered">  clearInterval(this.id);</span>
+<span class="cstat-no" title="statement not covered">  this.id = undefined;</span>
+<span class="cstat-no" title="statement not covered">  if (clear) {</span>
+<span class="cstat-no" title="statement not covered">    this.clearLine(this.stream);</span>
   }
 };
 &nbsp;
-Spinner.prototype.clearLine = <span class="fstat-no" title="function not covered" >function(stream) {</span>
-<span class="cstat-no" title="statement not covered" >  readline.clearLine(stream, 0);</span>
-<span class="cstat-no" title="statement not covered" >  readline.cursorTo(stream, 0);</span>
+Spinner.prototype.clearLine = <span class="fstat-no" title="function not covered">function(stream) {</span>
+<span class="cstat-no" title="statement not covered">  readline.clearLine(stream, 0);</span>
+<span class="cstat-no" title="statement not covered">  readline.cursorTo(stream, 0);</span>
 }
 &nbsp;
 // Helpers
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isInt(value) {</span>
-<span class="cstat-no" title="statement not covered" >  return (typeof value==='number' &amp;&amp; (value%1)===0);</span>
+<span class="fstat-no" title="function not covered">function isInt(value) {</span>
+<span class="cstat-no" title="statement not covered">  return (typeof value==='number' &amp;&amp; (value%1)===0);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function mapToSpinner(value, spinners) {</span>
+<span class="fstat-no" title="function not covered">function mapToSpinner(value, spinners) {</span>
   // Not an integer, return as strng
-<span class="cstat-no" title="statement not covered" >  if (!isInt(value)) {</span>
-<span class="cstat-no" title="statement not covered" >    return value + '';</span>
+<span class="cstat-no" title="statement not covered">  if (!isInt(value)) {</span>
+<span class="cstat-no" title="statement not covered">    return value + '';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var length = Spinner.spinners.length;</span>
+<span class="cstat-no" title="statement not covered">  var length = Spinner.spinners.length;</span>
 &nbsp;
   // Check if index is within bounds
-<span class="cstat-no" title="statement not covered" >  value = (value &gt;= length) ? 0 : value;</span>
+<span class="cstat-no" title="statement not covered">  value = (value &gt;= length) ? 0 : value;</span>
   // If negative, count from the end
-<span class="cstat-no" title="statement not covered" >  value = (value &lt; 0) ? length + value : value;</span>
+<span class="cstat-no" title="statement not covered">  value = (value &lt; 0) ? length + value : value;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return Spinner.spinners[value];</span>
+<span class="cstat-no" title="statement not covered">  return Spinner.spinners[value];</span>
 }
 &nbsp;
 exports.Spinner = Spinner;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 23:36:52 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 21:19:09 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
